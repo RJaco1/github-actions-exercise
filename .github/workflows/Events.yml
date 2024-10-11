@@ -8,6 +8,8 @@ jobs:
         run: |
             gh issue \
             create --title "Issue title" --body "Issue body"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   issuesEvent:
     needs: createIssue
     runs-on: ubuntu-latest
