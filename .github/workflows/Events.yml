@@ -1,5 +1,5 @@
 name: Issues Event
-on: issues
+on: push
 jobs:
   issuesEvent:
     runs-on: ubuntu-latest
