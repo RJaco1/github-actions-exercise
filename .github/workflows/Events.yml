@@ -1,7 +1,15 @@
 name: Issues Event
 on: push
 jobs:
+  createIssue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: creating an issue
+        run: |
+            gh issue \
+            create --title "Issue title" --body "Issue body"
   issuesEvent:
+    needs: createIssue
     runs-on: ubuntu-latest
     steps:
       - name: running issue event
