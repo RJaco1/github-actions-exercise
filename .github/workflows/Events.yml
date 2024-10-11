@@ -3,6 +3,9 @@ on: push
 jobs:
   createIssue:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     steps:
       - name: creating an issue
         run: |
